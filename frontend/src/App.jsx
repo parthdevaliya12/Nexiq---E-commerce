@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import Verify from "./pages/verify";
+import Verify from "./pages/Verify";
 import VerifyEmail from "./pages/VerifyEmail";
 import Profile from "./pages/Profile";
 import Products from "./pages/Products";

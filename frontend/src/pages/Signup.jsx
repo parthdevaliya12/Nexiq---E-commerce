@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Button } from "@/components/ui/button";
 // import {
 //   Card,
@@ -39,7 +40,7 @@
 //     try {
 //       setLoading(true);
 //       const res = await axios.post(
-//         "http://localhost:8000/api/user/register",
+//         `${serverURL}/api/user/register`,
 //         formData,
 //         {
 //           headers: {
@@ -208,7 +209,7 @@ const Signup = () => {
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:8000/api/user/google", {
+      const res = await axios.post(`${serverURL}/api/user/google`, {
         token: credentialResponse.credential,
       });
       if (res.data.success) {
@@ -239,7 +240,7 @@ const Signup = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:8000/api/user/register",
+        `${serverURL}/api/user/register`,
         formData,
         {
           headers: {

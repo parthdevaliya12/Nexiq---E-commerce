@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import axios from "axios";
 // import { useEffect, useState } from "react";
 // import { useNavigate, useParams } from "react-router-dom";
@@ -12,7 +13,7 @@
 //     const verifyEmail = async () => {
 //       try {
 //         const res = await axios.post(
-//           `http://localhost:8000/api/user/verify`,
+//           `${serverURL}/api/user/verify`,
 //           {},
 //           {
 //             headers: {
@@ -63,7 +64,7 @@ function VerifyEmail() {
     const verifyEmail = async () => {
       try {
         const res = await axios.post(
-          `http://localhost:8000/api/user/verify`,
+          `${serverURL}/api/user/verify`,
           {},
           {
             headers: {

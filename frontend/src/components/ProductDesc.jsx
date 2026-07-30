@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import axios from "axios";
 // import { Button } from "./ui/button";
 // import { Input } from "./ui/input";
@@ -19,7 +20,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         "http://localhost:8000/api/cart/addtocart",
+//         `${serverURL}/api/cart/addtocart`,
 //         { productId },
 //         {
 //           headers: {
@@ -91,7 +92,7 @@ const ProductDesc = ({ product }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/cart/addtocart",
+        `${serverURL}/api/cart/addtocart`,
         { productId },
         {
           headers: {

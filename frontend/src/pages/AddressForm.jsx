@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -90,7 +91,7 @@ const AddressForm = () => {
           address: addresses[selectedAddress]
         };
 
-        const res = await axios.post("http://localhost:8000/api/order/fake-upi", orderData, {
+        const res = await axios.post(`${serverURL}/api/order/fake-upi`, orderData, {
           headers: {
             Authorization: `Bearer ${accessToken}`
           }

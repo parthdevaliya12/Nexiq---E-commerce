@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import ImageUpload from "@/components/ImageUpload";
 // import { Button } from "@/components/ui/button";
 // import {
@@ -63,7 +64,7 @@
 
 //       setLoading(true);
 //       const res = await axios.post(
-//         "http://localhost:8000/api/product/add",
+//         `${serverURL}/api/product/add`,
 //         formData,
 //         {
 //           headers: {
@@ -262,7 +263,7 @@ const AddProducts = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:8000/api/product/add",
+        `${serverURL}/api/product/add`,
         formData,
         {
           headers: {

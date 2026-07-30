@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
@@ -12,7 +13,7 @@ const FeaturedProducts = () => {
   useEffect(() => {
     const fetchLatestProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/product/get");
+        const res = await axios.get(`${serverURL}/api/product/get`);
         if (res.data.success) {
           // Take the latest 8 products
           setProducts(res.data.product.slice(0, 8));

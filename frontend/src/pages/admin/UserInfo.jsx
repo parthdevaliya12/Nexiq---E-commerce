@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Button } from "@/components/ui/button";
 // import { ArrowLeft } from "lucide-react";
 // import { useEffect, useState } from "react";
@@ -48,7 +49,7 @@
 //       }
 
 //       const res = await axios.put(
-//         `http://localhost:8000/api/user/update/${userId}`,
+//         `${serverURL}/api/user/update/${userId}`,
 //         formData,
 //         {
 //           headers: {
@@ -74,7 +75,7 @@
 //   const getUserDetails = async () => {
 //     try {
 //       const res = await axios.get(
-//         `http://localhost:8000/api/user/getuser/${userId}`,
+//         `${serverURL}/api/user/getuser/${userId}`,
 //       );
 //       if (res.data.success) {
 //         setUpdateUser(res.data.data);
@@ -338,7 +339,7 @@ const UserInfo = () => {
       }
 
       const res = await axios.put(
-        `http://localhost:8000/api/user/update/${userId}`,
+        `${serverURL}/api/user/update/${userId}`,
         formData,
         {
           headers: {
@@ -367,7 +368,7 @@ const UserInfo = () => {
   const getUserDetails = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8000/api/user/getuser/${userId}`,
+        `${serverURL}/api/user/getuser/${userId}`,
       );
 
       if (res.data.success) {

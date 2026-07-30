@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { ShoppingCart, Menu, X, LogOut, Search } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
@@ -30,7 +31,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/user/logout",
+        `${serverURL}/api/user/logout`,
         {},
         {
           headers: {

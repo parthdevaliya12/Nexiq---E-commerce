@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 // import { useDispatch, useSelector } from "react-redux";
 // import user from "/profile.png";
@@ -23,7 +24,7 @@
 //   const handleUpdateQty = async (productId, type) => {
 //     try {
 //       const res = await axios.put(
-//         "http://localhost:8000/api/cart/update",
+//         `${serverURL}/api/cart/update`,
 //         { productId, type },
 //         {
 //           headers: {
@@ -41,7 +42,7 @@
 
 //   const handleRemove = async (productId) => {
 //     try {
-//       const res = await axios.delete("http://localhost:8000/api/cart/remove", {
+//       const res = await axios.delete(`${serverURL}/api/cart/remove`, {
 //         headers: {
 //           Authorization: `Bearer ${accessToken}`,
 //         },
@@ -58,7 +59,7 @@
 
 //   const loadCart = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:8000/api/cart", {
+//       const res = await axios.get(`${serverURL}/api/cart`, {
 //         headers: {
 //           Authorization: `Bearer ${accessToken}`,
 //         },
@@ -234,7 +235,7 @@ const Cart = () => {
   const handleUpdateQty = async (productId, type) => {
     try {
       const res = await axios.put(
-        "http://localhost:8000/api/cart/update",
+        `${serverURL}/api/cart/update`,
         { productId, type },
         {
           headers: {
@@ -253,7 +254,7 @@ const Cart = () => {
 
   const handleRemove = async (productId) => {
     try {
-      const res = await axios.delete("http://localhost:8000/api/cart/remove", {
+      const res = await axios.delete(`${serverURL}/api/cart/remove`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -271,7 +272,7 @@ const Cart = () => {
 
   const loadCart = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/cart", {
+      const res = await axios.get(`${serverURL}/api/cart`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

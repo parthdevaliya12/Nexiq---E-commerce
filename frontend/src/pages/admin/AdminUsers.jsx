@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Input } from "@/components/ui/input";
 // import axios from "axios";
 // import { Edit, Eye, Search } from "lucide-react";
@@ -15,7 +16,7 @@
 //     const accessToken = localStorage.getItem("accessToken");
 
 //     try {
-//       const res = await axios.get("http://localhost:8000/api/user/allusers", {
+//       const res = await axios.get(`${serverURL}/api/user/allusers`, {
 //         headers: {
 //           Authorization: `Bearer ${accessToken}`,
 //         },
@@ -110,7 +111,7 @@ const AdminUsers = () => {
     const accessToken = localStorage.getItem("accessToken");
 
     try {
-      const res = await axios.get("http://localhost:8000/api/user/allusers", {
+      const res = await axios.get(`${serverURL}/api/user/allusers`, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },

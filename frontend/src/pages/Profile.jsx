@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 // import { Button } from "@/components/ui/button";
 // import { Label } from "@/components/ui/label";
@@ -76,7 +77,7 @@
 //       }
 
 //       const res = await axios.put(
-//         `http://localhost:8000/api/user/update/${userId}`,
+//         `${serverURL}/api/user/update/${userId}`,
 //         formData,
 //         {
 //           headers: {
@@ -335,7 +336,7 @@ const Profile = () => {
     const fetchOrders = async () => {
       try {
         const accessToken = localStorage.getItem("accessToken");
-        const res = await axios.get("http://localhost:8000/api/order/user-orders", {
+        const res = await axios.get(`${serverURL}/api/order/user-orders`, {
           headers: { Authorization: `Bearer ${accessToken}` }
         });
         if (res.data.success) {
@@ -385,7 +386,7 @@ const Profile = () => {
       }
 
       const res = await axios.put(
-        `http://localhost:8000/api/user/update/${userId}`,
+        `${serverURL}/api/user/update/${userId}`,
         formData,
         {
           headers: {

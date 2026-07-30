@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -13,7 +14,7 @@ const ShowUserOrders = () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
       const res = await axios.get(
-        `http://localhost:8000/api/order/admin-user-orders/${userId}`,
+        `${serverURL}/api/order/admin-user-orders/${userId}`,
         {
           headers: { Authorization: `Bearer ${accessToken}` },
         }
@@ -37,7 +38,7 @@ const ShowUserOrders = () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
       const res = await axios.put(
-        `http://localhost:8000/api/order/update-status/${orderId}`,
+        `${serverURL}/api/order/update-status/${orderId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );

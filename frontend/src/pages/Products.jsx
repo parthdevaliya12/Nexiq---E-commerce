@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import FilterSidebar from "@/components/FilterSidebar";
 // import ProductCard from "@/components/ProductCard";
 
@@ -28,7 +29,7 @@
 //   const getAllProducts = async () => {
 //     try {
 //       setLoading(true);
-//       const res = await axios.get("http://localhost:8000/api/product/get");
+//       const res = await axios.get(`${serverURL}/api/product/get`);
 
 //       console.log(res.data); // check this
 
@@ -155,7 +156,7 @@ const Products = () => {
     try {
       setLoading(true);
 
-      const res = await axios.get("http://localhost:8000/api/product/get");
+      const res = await axios.get(`${serverURL}/api/product/get`);
 
       if (res.data.success) {
         setAllProducts(res.data.product);

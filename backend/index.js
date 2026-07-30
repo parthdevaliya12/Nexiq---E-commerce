@@ -19,7 +19,7 @@ app.use(express.json())
 
 
 app.use(cors({
-    origin: true,
+    origin: ['http://localhost:5173', 'https://nexiq-ecommerce.vercel.app'],
     credentials: true,
 }))
 

@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -34,7 +35,7 @@ const AdminSales = () => {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/analytics/dashboard", {
+        const res = await axios.get(`${serverURL}/api/analytics/dashboard`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },

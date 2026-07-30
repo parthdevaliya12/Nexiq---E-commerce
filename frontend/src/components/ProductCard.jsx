@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { ShoppingCart } from "lucide-react";
 // import { Button } from "./ui/button";
 // import { Skeleton } from "./ui/skeleton";
@@ -21,7 +22,7 @@
 
 //     try {
 //       const res = await axios.post(
-//         "http://localhost:8000/api/cart/addtocart",
+//         `${serverURL}/api/cart/addtocart`,
 //         { productId },
 //         {
 //           headers: {
@@ -105,7 +106,7 @@ const ProductCard = ({ product, loading }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/cart/addtocart",
+        `${serverURL}/api/cart/addtocart`,
         { productId },
         {
           headers: {

@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 // import { Input } from "@/components/ui/input";
 // import { Edit, Search, Trash2 } from "lucide-react";
 // import {
@@ -100,7 +101,7 @@
 
 //     try {
 //       const res = await axios.put(
-//         `http://localhost:8000/api/product/update/${editProduct._id}`,
+//         `${serverURL}/api/product/update/${editProduct._id}`,
 //         formData,
 //         {
 //           headers: {
@@ -128,7 +129,7 @@
 //         (product) => product._id !== productId,
 //       );
 //       const res = await axios.delete(
-//         `http://localhost:8000/api/product/delete/${productId}`,
+//         `${serverURL}/api/product/delete/${productId}`,
 //         {
 //           headers: {
 //             Authorization: `Bearer ${accessToken}`,
@@ -420,7 +421,7 @@ const AdminProduct = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:8000/api/product/update/${editProduct._id}`,
+        `${serverURL}/api/product/update/${editProduct._id}`,
         formData,
         {
           headers: {
@@ -451,7 +452,7 @@ const AdminProduct = () => {
       );
 
       const res = await axios.delete(
-        `http://localhost:8000/api/product/delete/${productId}`,
+        `${serverURL}/api/product/delete/${productId}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

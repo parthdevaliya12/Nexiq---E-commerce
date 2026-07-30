@@ -1,3 +1,4 @@
+import { serverURL } from "@/serverURL";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
@@ -10,7 +11,7 @@ const AdminOrders = () => {
   const fetchOrders = async () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
-      const res = await axios.get("http://localhost:8000/api/order/admin-orders", {
+      const res = await axios.get(`${serverURL}/api/order/admin-orders`, {
         headers: { Authorization: `Bearer ${accessToken}` },
       });
       if (res.data.success) {
@@ -32,7 +33,7 @@ const AdminOrders = () => {
     try {
       const accessToken = localStorage.getItem("accessToken");
       const res = await axios.put(
-        `http://localhost:8000/api/order/update-status/${orderId}`,
+        `${serverURL}/api/order/update-status/${orderId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${accessToken}` } }
       );

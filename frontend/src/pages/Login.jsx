@@ -311,7 +311,7 @@ const Login = () => {
 
               {/* social buttons */}
               <div className="flex justify-center w-full mb-8 animate-in slide-in-from-bottom-5 fade-in duration-700 delay-200 fill-mode-both">
-                <div className="w-full [&>div]:w-full [&_iframe]:!w-full flex justify-center">
+                <div className="flex justify-center">
                   <GoogleLogin
                     onSuccess={handleGoogleSuccess}
                     onError={() => toast.error("Google Login Failed")}
